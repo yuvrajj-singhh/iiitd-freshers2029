@@ -14,19 +14,37 @@ const StudentRegistration = () => {
   });
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Registration submitted:', formData);
-    toast({
-      title: "Registration Successful! 🎉",
-      description: "Welcome to the fresher party! We'll contact you soon with more details.",
-    });
-    setFormData({
-      name: '',
-      email: '',
-      phone: ''
-    });
+  
+    try {
+      const response = await fetch("https://sheetdb.io/api/v1/6toevsxy7w3hb", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ data: [formData] }), // SheetDB requires { data: [...] }
+      });
+  
+      if (response.ok) {
+        toast({
+          title: "Registration Successful! 🎉",
+          description: "Welcome to the fresher party! We'll contact you soon with more details.",
+        });
+        setFormData({ name: '', email: '', phone: '' });
+      } else {
+        toast({
+          title: "Error",
+          description: "Could not save your registration. Please try again.",
+        });
+      }
+    } catch (error) {
+      console.error(error);
+      toast({
+        title: "Error",
+        description: "An unexpected error occurred.",
+      });
+    }
   };
+  
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
