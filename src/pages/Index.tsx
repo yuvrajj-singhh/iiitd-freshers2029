@@ -54,20 +54,25 @@ const Index = () => {
 
       {/* Hero Section */}
       <section id="hero" className="min-h-screen flex items-center justify-center relative overflow-hidden">
-        {/* Animated Background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-orange-900/20">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,165,0,0.1),transparent_50%)]"></div>
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(255,140,0,0.1),transparent_50%)]"></div>
+        {/* Space Background Image */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: `url('/lovable-uploads/43e56455-4728-4f1e-b10f-fc61ad1caf55.png')`
+          }}
+        >
+          {/* Dark overlay to ensure text readability */}
+          <div className="absolute inset-0 bg-black/60"></div>
         </div>
 
         {/* Floating Elements */}
-        <div className="absolute top-20 left-10 animate-pulse">
+        <div className="absolute top-20 left-10 animate-pulse z-10">
           <Star className="text-orange-400 opacity-60" size={24} />
         </div>
-        <div className="absolute top-40 right-20 animate-pulse delay-1000">
+        <div className="absolute top-40 right-20 animate-pulse delay-1000 z-10">
           <Sparkles className="text-orange-300 opacity-60" size={32} />
         </div>
-        <div className="absolute bottom-40 left-20 animate-pulse delay-2000">
+        <div className="absolute bottom-40 left-20 animate-pulse delay-2000 z-10">
           <Star className="text-orange-500 opacity-40" size={20} />
         </div>
 
@@ -110,7 +115,7 @@ const Index = () => {
         </div>
 
         {/* Decorative Elements */}
-        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent"></div>
+        <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-black to-transparent z-5"></div>
       </section>
 
       {/* Event Details Section */}
