@@ -23,8 +23,20 @@ const EventDetails = () => {
   ];
 
   return (
-    <section id="event-details" className="py-20 px-4 bg-gradient-to-br from-black via-gray-900 to-black">
-      <div className="max-w-6xl mx-auto">
+    <section 
+      id="event-details" 
+      className="py-20 px-4 relative"
+      style={{
+        backgroundImage: `url('/lovable-uploads/1357af68-6282-444b-b357-9e3bba267e67.png')`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}
+    >
+      {/* Dark overlay for readability */}
+      <div className="absolute inset-0 bg-black/70"></div>
+      
+      <div className="max-w-6xl mx-auto relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-space-armada">
             EVENT <span className="text-orange-400">DETAILS</span>

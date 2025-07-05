@@ -78,11 +78,14 @@ const Index = () => {
 
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight font-space-armada">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-                FRESHERS'25
-              </span>
-            </h1>
+            {/* FRESHERS'25 Image Heading */}
+            <div className="mb-6">
+              <img 
+                src="/lovable-uploads/1737fac9-7d05-4a11-b7e1-88192b752f64.png" 
+                alt="FRESHERS'25" 
+                className="mx-auto max-w-4xl w-full h-auto"
+              />
+            </div>
             <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed font-teachers">
               Join us for an unforgettable fresher party experience! Connect with fellow students, 
               make lasting friendships, and kickstart your college journey with style.
