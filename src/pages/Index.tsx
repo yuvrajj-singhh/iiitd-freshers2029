@@ -18,11 +18,11 @@ const Index = () => {
       <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-orange-400/20">
         <div className="max-w-6xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold">
+            <div className="text-2xl font-bold font-space-armada">
               <span className="text-white">FRESHER</span>
               <span className="text-orange-400">PARTY</span>
             </div>
-            <div className="hidden md:flex space-x-8">
+            <div className="hidden md:flex space-x-8 font-teachers">
               <button 
                 onClick={() => scrollToSection('hero')}
                 className="text-gray-300 hover:text-orange-400 transition-colors"
@@ -73,13 +73,12 @@ const Index = () => {
 
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
           <div className="mb-8">
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight">
-              <span className="text-white">WELCOME TO</span><br />
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 leading-tight font-space-armada">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-400 to-orange-600">
-                YOUR FUTURE
+                FRESHERS'25
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed font-teachers">
               Join us for an unforgettable fresher party experience! Connect with fellow students, 
               make lasting friendships, and kickstart your college journey with style.
             </p>
@@ -88,14 +87,14 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <Button 
               onClick={() => scrollToSection('register')}
-              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-xl"
+              className="bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 transform hover:scale-105 shadow-xl font-teachers"
             >
               REGISTER NOW 🚀
             </Button>
             <Button 
               onClick={() => scrollToSection('event-details')}
               variant="outline" 
-              className="border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300"
+              className="border-2 border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black font-bold py-4 px-8 rounded-lg text-lg transition-all duration-300 font-teachers"
             >
               LEARN MORE
             </Button>
@@ -126,14 +125,14 @@ const Index = () => {
       {/* Footer */}
       <footer className="bg-black border-t border-orange-400/20 py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="text-2xl font-bold mb-4">
+          <div className="text-2xl font-bold mb-4 font-space-armada">
             <span className="text-white">FRESHER</span>
             <span className="text-orange-400">PARTY</span>
           </div>
-          <p className="text-gray-400 mb-6">
+          <p className="text-gray-400 mb-6 font-teachers">
             Making your college journey memorable from day one.
           </p>
-          <div className="text-sm text-gray-500">
+          <div className="text-sm text-gray-500 font-teachers">
             © 2024 College Fresher Party. All rights reserved.
           </div>
         </div>

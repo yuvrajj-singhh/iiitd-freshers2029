@@ -24,10 +24,10 @@ const ContactInfo = () => {
     <section id="contact" className="py-20 px-4 bg-gradient-to-br from-gray-900 via-black to-gray-800">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-space-armada">
             GET IN <span className="text-orange-400">TOUCH</span>
           </h2>
-          <p className="text-gray-300 text-lg">
+          <p className="text-gray-300 text-lg font-teachers">
             Have questions? Need more info? We're here to help!
           </p>
         </div>
@@ -37,14 +37,14 @@ const ContactInfo = () => {
             {contacts.map((contact, index) => (
               <Card key={index} className="bg-gray-800/50 border-orange-400/30 backdrop-blur-sm">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-2">{contact.name}</h3>
-                  <p className="text-orange-400 mb-4">{contact.role}</p>
+                  <h3 className="text-xl font-bold text-white mb-2 font-druk-trial">{contact.name}</h3>
+                  <p className="text-orange-400 mb-4 font-teachers">{contact.role}</p>
                   <div className="space-y-3">
-                    <div className="flex items-center text-gray-300">
+                    <div className="flex items-center text-gray-300 font-teachers">
                       <Phone size={16} className="mr-2 text-orange-400" />
                       <span>{contact.phone}</span>
                     </div>
-                    <div className="flex items-center text-gray-300">
+                    <div className="flex items-center text-gray-300 font-teachers">
                       <Mail size={16} className="mr-2 text-orange-400" />
                       <span>{contact.email}</span>
                     </div>
@@ -56,18 +56,18 @@ const ContactInfo = () => {
 
           <Card className="bg-gray-800/50 border-orange-400/30 backdrop-blur-sm">
             <CardContent className="p-6">
-              <h3 className="text-xl font-bold text-white mb-4">Quick Info</h3>
+              <h3 className="text-xl font-bold text-white mb-4 font-druk-trial">Quick Info</h3>
               <div className="space-y-4">
-                <div className="flex items-start text-gray-300">
+                <div className="flex items-start text-gray-300 font-teachers">
                   <MapPin size={16} className="mr-2 text-orange-400 mt-1" />
                   <div>
                     <strong className="text-white">College Address:</strong><br />
-                    Main Campus Building<br />
+                    Coming Soon<br />
                     Your College Name<br />
                     City, State - PIN
                   </div>
                 </div>
-                <div className="flex items-center text-gray-300">
+                <div className="flex items-center text-gray-300 font-teachers">
                   <MessageCircle size={16} className="mr-2 text-orange-400" />
                   <span>Response time: Within 24 hours</span>
                 </div>
@@ -78,16 +78,16 @@ const ContactInfo = () => {
 
         <div className="text-center">
           <div className="bg-gradient-to-r from-orange-500/20 to-orange-600/20 rounded-lg p-8 border border-orange-400/30">
-            <h3 className="text-2xl font-bold text-white mb-4">Need Immediate Assistance?</h3>
-            <p className="text-gray-300 mb-6">
+            <h3 className="text-2xl font-bold text-white mb-4 font-druk-trial">Need Immediate Assistance?</h3>
+            <p className="text-gray-300 mb-6 font-teachers">
               For urgent queries or last-minute information, reach out to us directly!
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-orange-500 hover:bg-orange-600 text-white">
+              <Button className="bg-orange-500 hover:bg-orange-600 text-white font-teachers">
                 <Phone className="mr-2" size={16} />
                 Call Now
               </Button>
-              <Button variant="outline" className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black">
+              <Button variant="outline" className="border-orange-400 text-orange-400 hover:bg-orange-400 hover:text-black font-teachers">
                 <Mail className="mr-2" size={16} />
                 Send Email
               </Button>

@@ -7,18 +7,18 @@ const EventDetails = () => {
   const eventHighlights = [
     {
       icon: Music,
-      title: "Live Entertainment",
-      description: "DJ, Live Bands, and Dance Performances"
+      title: "DJ & Music",
+      description: "Professional DJ with the latest beats"
     },
     {
       icon: Utensils,
-      title: "Food & Refreshments",
-      description: "Delicious snacks and beverages for all"
+      title: "Food & Drinks",
+      description: "Delicious food and refreshing beverages"
     },
     {
       icon: Users,
-      title: "Networking",
-      description: "Meet seniors, make friends, build connections"
+      title: "Clubbing Vibes",
+      description: "Dance floor with amazing club atmosphere"
     }
   ];
 
@@ -26,10 +26,10 @@ const EventDetails = () => {
     <section id="event-details" className="py-20 px-4 bg-gradient-to-br from-black via-gray-900 to-black">
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 font-space-armada">
             EVENT <span className="text-orange-400">DETAILS</span>
           </h2>
-          <p className="text-gray-300 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-300 text-lg max-w-2xl mx-auto font-teachers">
             Get ready for an epic welcome celebration designed to kickstart your college journey!
           </p>
         </div>
@@ -40,11 +40,11 @@ const EventDetails = () => {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <Calendar className="text-orange-400 mr-3" size={24} />
-                  <h3 className="text-xl font-bold text-white">Date & Time</h3>
+                  <h3 className="text-xl font-bold text-white font-druk-trial">Date & Time</h3>
                 </div>
-                <p className="text-gray-300 text-lg">
+                <p className="text-gray-300 text-lg font-teachers">
                   <strong className="text-white">Date:</strong> Coming Soon<br />
-                  <strong className="text-white">Time:</strong> 6:00 PM onwards
+                  <strong className="text-white">Time:</strong> Coming Soon
                 </p>
               </CardContent>
             </Card>
@@ -53,34 +53,34 @@ const EventDetails = () => {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <MapPin className="text-orange-400 mr-3" size={24} />
-                  <h3 className="text-xl font-bold text-white">Venue</h3>
+                  <h3 className="text-xl font-bold text-white font-druk-trial">Venue</h3>
                 </div>
-                <p className="text-gray-300 text-lg">
-                  <strong className="text-white">Location:</strong> College Auditorium<br />
-                  <strong className="text-white">Address:</strong> Main Campus Building
+                <p className="text-gray-300 text-lg font-teachers">
+                  <strong className="text-white">Location:</strong> Coming Soon<br />
+                  <strong className="text-white">Address:</strong> Coming Soon
                 </p>
               </CardContent>
             </Card>
           </div>
 
           <div className="bg-gradient-to-br from-orange-500/20 to-orange-600/10 rounded-lg p-8 border border-orange-400/30">
-            <h3 className="text-2xl font-bold text-white mb-6">What to Expect</h3>
-            <ul className="space-y-4 text-gray-300">
+            <h3 className="text-2xl font-bold text-white mb-6 font-druk-trial">What to Expect</h3>
+            <ul className="space-y-4 text-gray-300 font-teachers">
               <li className="flex items-start">
                 <span className="text-orange-400 mr-2">•</span>
-                Welcome speeches from college administration
+                Epic clubbing experience with professional DJ
               </li>
               <li className="flex items-start">
                 <span className="text-orange-400 mr-2">•</span>
-                Talent showcase and cultural performances
+                Unlimited drinks and delicious food
               </li>
               <li className="flex items-start">
                 <span className="text-orange-400 mr-2">•</span>
-                Interactive games and fun activities
+                Dance floor with amazing lighting and sound
               </li>
               <li className="flex items-start">
                 <span className="text-orange-400 mr-2">•</span>
-                Networking session with seniors
+                Meet and connect with fellow freshers
               </li>
               <li className="flex items-start">
                 <span className="text-orange-400 mr-2">•</span>
@@ -99,8 +99,8 @@ const EventDetails = () => {
             <Card key={index} className="bg-gray-800/50 border-orange-400/30 backdrop-blur-sm hover:bg-gray-700/50 transition-all duration-300">
               <CardContent className="p-6 text-center">
                 <highlight.icon className="text-orange-400 mx-auto mb-4" size={48} />
-                <h4 className="text-xl font-bold text-white mb-2">{highlight.title}</h4>
-                <p className="text-gray-300">{highlight.description}</p>
+                <h4 className="text-xl font-bold text-white mb-2 font-druk-trial">{highlight.title}</h4>
+                <p className="text-gray-300 font-teachers">{highlight.description}</p>
               </CardContent>
             </Card>
           ))}
