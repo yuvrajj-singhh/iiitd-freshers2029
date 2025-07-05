@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
@@ -11,10 +10,7 @@ const StudentRegistration = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    phone: '',
-    course: '',
-    year: '',
-    expectations: ''
+    phone: ''
   });
   const { toast } = useToast();
 
@@ -28,14 +24,11 @@ const StudentRegistration = () => {
     setFormData({
       name: '',
       email: '',
-      phone: '',
-      course: '',
-      year: '',
-      expectations: ''
+      phone: ''
     });
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
@@ -62,83 +55,43 @@ const StudentRegistration = () => {
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="name" className="text-white mb-2 block font-teachers">Full Name *</Label>
-                  <Input
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="bg-gray-700 border-gray-600 text-white focus:border-orange-400 font-teachers"
-                    placeholder="Enter your full name"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="email" className="text-white mb-2 block font-teachers">Email Address *</Label>
-                  <Input
-                    id="email"
-                    name="email"
-                    type="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="bg-gray-700 border-gray-600 text-white focus:border-orange-400 font-teachers"
-                    placeholder="your.email@example.com"
-                  />
-                </div>
-              </div>
-
-              <div className="grid md:grid-cols-2 gap-6">
-                <div>
-                  <Label htmlFor="phone" className="text-white mb-2 block font-teachers">Phone Number *</Label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    required
-                    className="bg-gray-700 border-gray-600 text-white focus:border-orange-400 font-teachers"
-                    placeholder="+91 XXXXX XXXXX"
-                  />
-                </div>
-                <div>
-                  <Label htmlFor="year" className="text-white mb-2 block font-teachers">Academic Year *</Label>
-                  <Input
-                    id="year"
-                    name="year"
-                    value={formData.year}
-                    onChange={handleChange}
-                    required
-                    className="bg-gray-700 border-gray-600 text-white focus:border-orange-400 font-teachers"
-                    placeholder="1st Year, 2nd Year, etc."
-                  />
-                </div>
-              </div>
-
               <div>
-                <Label htmlFor="course" className="text-white mb-2 block font-teachers">Course/Department *</Label>
+                <Label htmlFor="name" className="text-white mb-2 block font-teachers">Full Name *</Label>
                 <Input
-                  id="course"
-                  name="course"
-                  value={formData.course}
+                  id="name"
+                  name="name"
+                  value={formData.name}
                   onChange={handleChange}
                   required
                   className="bg-gray-700 border-gray-600 text-white focus:border-orange-400 font-teachers"
-                  placeholder="Computer Science, Engineering, etc."
+                  placeholder="Enter your full name"
                 />
               </div>
 
               <div>
-                <Label htmlFor="expectations" className="text-white mb-2 block font-teachers">What are you most excited about?</Label>
-                <Textarea
-                  id="expectations"
-                  name="expectations"
-                  value={formData.expectations}
+                <Label htmlFor="email" className="text-white mb-2 block font-teachers">Email Address *</Label>
+                <Input
+                  id="email"
+                  name="email"
+                  type="email"
+                  value={formData.email}
                   onChange={handleChange}
-                  className="bg-gray-700 border-gray-600 text-white focus:border-orange-400 min-h-24 font-teachers"
-                  placeholder="Share your thoughts about the upcoming fresher party..."
+                  required
+                  className="bg-gray-700 border-gray-600 text-white focus:border-orange-400 font-teachers"
+                  placeholder="your.email@example.com"
+                />
+              </div>
+
+              <div>
+                <Label htmlFor="phone" className="text-white mb-2 block font-teachers">Phone Number *</Label>
+                <Input
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="bg-gray-700 border-gray-600 text-white focus:border-orange-400 font-teachers"
+                  placeholder="+91 XXXXX XXXXX"
                 />
               </div>
 

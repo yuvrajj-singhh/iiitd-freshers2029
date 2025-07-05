@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button";
 import { ArrowDown, Star, Sparkles } from 'lucide-react';
 import StudentRegistration from '../components/StudentRegistration';
 import EventDetails from '../components/EventDetails';
-import ContactInfo from '../components/ContactInfo';
 
 const Index = () => {
   const scrollToSection = (sectionId: string) => {
@@ -16,11 +15,14 @@ const Index = () => {
     <div className="min-h-screen bg-black text-white">
       {/* Navigation */}
       <nav className="fixed top-0 w-full z-50 bg-black/80 backdrop-blur-sm border-b border-orange-400/20">
-        <div className="max-w-6xl mx-auto px-4 py-4">
+        <div className="max-w-6xl mx-auto px-4 py-2">
           <div className="flex justify-between items-center">
-            <div className="text-2xl font-bold font-space-armada">
-              <span className="text-white">FRESHER</span>
-              <span className="text-orange-400">PARTY</span>
+            <div className="h-8">
+              <img 
+                src="/lovable-uploads/1737fac9-7d05-4a11-b7e1-88192b752f64.png" 
+                alt="FRESHERS'25" 
+                className="h-full w-auto"
+              />
             </div>
             <div className="hidden md:flex space-x-8 font-teachers">
               <button 
@@ -40,12 +42,6 @@ const Index = () => {
                 className="text-gray-300 hover:text-orange-400 transition-colors"
               >
                 Register
-              </button>
-              <button 
-                onClick={() => scrollToSection('contact')}
-                className="text-gray-300 hover:text-orange-400 transition-colors"
-              >
-                Contact
               </button>
             </div>
           </div>
@@ -127,15 +123,15 @@ const Index = () => {
       {/* Registration Section */}
       <StudentRegistration />
 
-      {/* Contact Section */}
-      <ContactInfo />
-
       {/* Footer */}
       <footer className="bg-black border-t border-orange-400/20 py-12 px-4">
         <div className="max-w-6xl mx-auto text-center">
-          <div className="text-2xl font-bold mb-4 font-space-armada">
-            <span className="text-white">FRESHER</span>
-            <span className="text-orange-400">PARTY</span>
+          <div className="h-8 mb-4 flex justify-center">
+            <img 
+              src="/lovable-uploads/1737fac9-7d05-4a11-b7e1-88192b752f64.png" 
+              alt="FRESHERS'25" 
+              className="h-full w-auto"
+            />
           </div>
           <p className="text-gray-400 mb-6 font-teachers">
             Making your college journey memorable from day one.
